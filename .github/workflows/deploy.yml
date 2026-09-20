@@ -81,8 +81,9 @@ jobs:
         id: deploy
         uses: ./.github/actions/deploy-s3-docker
         with:
-          bucket: gha-security-hosting-demo
+          bucket: gh-custom-actions-339712857007-eu-north-1-an
           dist-folder: ./dist
+          bucket-region: eu-north-1
       - name: Output information
         run: |
           echo "Live URL: ${{ steps.deploy.outputs.website-url }}"
